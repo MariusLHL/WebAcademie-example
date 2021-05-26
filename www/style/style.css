@@ -1,0 +1,111 @@
+Nav {
+    width: 100%;
+    height: 5rem;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7609244381346288) 0%, rgba(0, 212, 255, 0) 100%);
+    position: fixed;
+    z-index: 50;
+}
+
+.test {
+
+    display: inline-block;
+    flex-direction: column-reverse;
+    margin-top: 5rem;
+}
+
+.card {
+    width: 100%;
+    height: 100vh;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.flower {
+    background-image: url('../static/flower_blur.png');
+    background-size: cover;
+}
+
+.phone {
+    height: 50em;
+}
+
+.phone img {
+    bottom: 10%;
+    z-index: 40;
+    height: 750px;
+    background-position: center;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+}
+
+.left{
+  left: 0;
+}
+
+.punchline {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    overflow-wrap: break-word;
+}
+
+.deep-blue {
+    background-color: black;
+}
+
+.punchline > h1, p {
+    color: white;
+    width: 75%;
+}
+
+.punchline > h1 {
+    border: white;
+}
+
+body.disabled {
+overflow-x: hidden; 
+overflow-y: scroll; 
+}
+
+/* Animation css */
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+  
