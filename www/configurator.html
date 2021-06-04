@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurer votre Iphone</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <Nav>
+        <button class="blue-btn"> Acheter mon iphone</button>
+    </Nav>
+    <div class="parent">
+        <div class="div1"> <img class="preview" style="width: 100%;" src="./static/color_picker.jpg" alt="" srcset="">
+        </div>
+        <div class="div3">
+            <h1>Configurer votre Iphone</h1>
+            <div class='model'>
+                <div class="wrapper-div">
+                    <div id="toggle">
+                        <button id="mini" onclick="model('mini')" class="choice">
+                            Iphone 12 mini
+                        </button>
+                        <button id="max" onclick="model('max')" class="choice">
+                            Iphone 12
+                        </button>
+                    </div>
+                    <div id="color" hidden="true" class="text-focus-in">
+                        <button id="mini" onclick="color('red')" class=" choice">
+                            red
+                        </button>
+                        <button id="max" onclick="color('blue')" class="choice">
+                            blue
+                        </button>
+                        <button id="max" onclick="color('orange')" class="choice">
+                            orange
+                        </button>
+                        <button id="max" onclick="color('pink')" class="choice">
+                            pink
+                        </button>
+                        <button id="max" onclick="color('gold')" class="choice">
+                            gold <strong>200$+</strong>
+                        </button>
+                    </div>
+                    <div id="storage" hidden="true" class="text-focus-in">
+                        <button id="128" onclick="ram('128')" class=" choice">
+                            128GB <strong>Gratuit</strong>
+                        </button>
+                        <button id="256" onclick="ram('256')" class="choice">
+                            256GB <strong>150$+</strong>
+                        </button>
+                        <button id="512" onclick="ram('512')" class="choice">
+                            512GB <strong>400$+</strong>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <style>
+        .model {
+            margin-top: 28%;
+            display: table;
+            width: 100%;
+        }
+
+        .choice {
+            display: block;
+            width: 100%;
+            border: 2px solid #0070c9;
+            padding: 10px 14px;
+            font-weight: 600;
+            font-size: large;
+            background-color: white;
+            border-radius: 1%;
+            margin-bottom: 12px;
+        }
+
+        .choice:hover {
+            background-color: lightblue;
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+        }
+
+        .wrapper-div {
+            display: table-cell;
+            vertical-align: middle
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .div1 {
+            grid-area: 2 / 2 / 6 / 3;
+        }
+
+        .div3 {
+            grid-area: 2 / 3 / 6 / 4;
+        }
+
+
+        .selector {
+            grid-area: selector;
+            margin-top: 100px;
+            background-color: rebeccapurple;
+        }
+    </style>
+
+    <script>
+        let total = 0
+
+        function model(x) {
+            switch (x) {
+                case 'mini':
+                    total += 1200
+                    break;
+
+                case 'max':
+                    total += 1300
+            }
+            alert(total)
+
+            document.getElementById('toggle').hidden = true
+            document.getElementById('color').hidden = false
+        }
+
+        function color(color) {
+            switch (color) {
+                case 'gold':
+                    total += 200
+                    document.cookie = "color=" + color;
+                default:
+                    document.cookie = "color=" + color;
+            }
+            document.getElementById('color').hidden = true
+            document.getElementById('storage').hidden = false
+        }
+
+        function ram(ammount) {
+            switch (ammount) {
+                case '128':
+                case '256':
+                    total += 150
+                    document.cookie = "ram=" + ammount;
+                case '512':
+                    total += 400
+                    document.cookie = "ram=" + ammount;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
