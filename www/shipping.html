@@ -5,38 +5,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nous Contactez</title>
     <link rel="stylesheet" href="./style/style.css">
-    <link href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>A propos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" rel="stylesheet">
 </head>
 
-<body style="display: grid;">
-    <div class="container">
-        <form action="">
-            <form action="action_page.php">
+<body>
+
+    <body>
+        <Nav>
+            <a href="./index.html">
+                <img src="./static/logo.png" class="logo" alt="" srcset="">
+            </a>
+            <div class="box-right">
+                <a class="link-nav" href="./contact.html">
+                    <p class="text-nav">Contact</p>
+                </a>
+                <a class="link-nav" href="./about.html">
+                    <p class="text-nav">A propos</p>
+                </a>
+                <a class="link-nav blue-btn" href="./configurator.html">
+                    Acheter
+                </a>
+            </div>
+
+        </Nav>
+
+        <div class="shipping-container">
+            <div class="preview" style="">
+                <div class="info">
+                    <img src="./static/mini.jpg" class="ico_preview" alt="">
+                    <div class="prev_text_container">
+                        <p class="black preview_text"><strong>Model:</strong>Iphone 12 <strong id="model">mini</strong> </p>
+                        <p class="black preview_text"><strong>Couleur:</strong><span id="color">red</span></p><br>
+                        <p class="black preview_text"><strong>Stockage:</strong><span id="storage">128</span>GB</p><br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="container">
+                    <form action="">
+                        <div class="">
+                            <h3>Addresse</h3>
+                            <i class="fa fa-user"></i> Nom
+                            <input type="text" id="fname" name="firstname">
+                            <label for="sname"><i class="fa fa-user"></i> Prenom
+                                <input type="text" id="sname" name="lastname">
+                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <input type="text" id="email" name="email" placeholder="john@example.com">
+                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                <label for="city"><i class="fa fa-institution"></i> City</label>
+                                <input type="text" id="city" name="city" placeholder="New York">
+
+                                <div class="row">
+                                    <div class="">
+                                        <label for="state">Ville</label>
+                                        <input type="text" id="city" name="city" placeholder="Paris">
+                                    </div>
+                                    <div class="">
+                                        <label for="zip">Code Postal</label>
+                                        <input type="text" id="zip" name="zip" placeholder="75000">
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="">
+                            <h3>Paiment</h3>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                            <label for="ccnum">Credit card number</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                            <label for="expmonth">Exp Month</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            <div class="row">
+                                <div class="">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                </div>
+                                <div class="">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" value="Proceder au Paiment" class="blue-btn">
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <style>
+            .shipping-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 0.2fr 1.1fr 1.7fr;
+                gap: 0px 0px;
+                grid-template-areas:
+                    ". . form form form form form form . . . ."
+                    ". . form form form form form form preview preview preview ."
+                    ". . form form form form form form . . . .";
+            }
+
+            .preview {
+                grid-area: preview;
+                padding-top: 0% !important;
+                padding: 10%;
 
 
-                <label for="email">Votre mail</label>
-                <input type="text" id="email" name="firstname" type="email">
+            }
 
-                <label for="subject">Country</label>
-                <select id="subject" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
+            .info {
+                border: 2px dotted gray;
+                background-color: #fbfbfb;
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                align-content: start;
+            }
 
-                <label for="body">Information supplementaire:</label>
-                <textarea id="body" name="subject" placeholder="Qu'elle est la nature de vote probleme ?" style="height:200px"></textarea>
+            .form {
+                grid-area: form;
+            }
 
-                <input type="submit" value="Submit">
+            strong {
+                font-weight: bold;
+            }
 
-            </form>
-        </form>
-    </div>
-</body>
+            .ico_preview {
+                height: 100px;
+                display: inline-block;
+            }
+
+            .preview_text {
+                display: block;
+                margin-left: 5px !important;
+                margin: 0px;
+            }
+
+            .prev_text_container {
+                padding-top: 2rem;
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+        <script src="./js/shipping.js"></script>
+    </body>
 
 </html>
