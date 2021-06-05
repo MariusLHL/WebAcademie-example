@@ -263,3 +263,7 @@ strong {
   display: flex;
   flex-direction: column;
 }
+
+h1 {
+  margin: 0px!important;
+}
