@@ -34,19 +34,32 @@
       </div>
 
     </Nav>
-    <div class="title-card">
-      <h1>A propos</h1>
+    <div class="grid-container">
+      <div class="image">
+        <div class="title-card">
+          <h1 class="color-white">A propos</h1>
+        </div>
+      </div>
+      <div class="content">
+        <div>
+          <h2><strong>Notre philosophie</strong></h2>
+          <hr>
+          <p class="about-text">
+            Le matériel, les logiciels et les services Apple fonctionnent en parfaite synergie pour offrir une
+            expérience
+            fluide et optimale. Vous pouvez démarrer un projet sur un Mac et le finir sur un iPad, juxtaposer vos écrans
+            pour élargir votre espace de travail, dessiner avec l’Apple Pencil sur votre iPad, ou vous servir de votre
+            iPhone pour faire des modifications en temps réel sur votre Mac. Et cela en bénéficiant d’une compatibilité
+            totale avec les apps Microsoft et Google. Le résultat : votre équipe dispose de tout ce qu’il lui faut pour
+            s’acquitter de toutes ses tâches.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+
+      </div>
     </div>
-    <div >
-      <p >
-        Le matériel, les logiciels et les services Apple fonctionnent en parfaite synergie pour offrir une expérience
-        fluide et optimale. Vous pouvez démarrer un projet sur un Mac et le finir sur un iPad, juxtaposer vos écrans
-        pour élargir votre espace de travail, dessiner avec l’Apple Pencil sur votre iPad, ou vous servir de votre
-        iPhone pour faire des modifications en temps réel sur votre Mac. Et cela en bénéficiant d’une compatibilité
-        totale avec les apps Microsoft et Google. Le résultat : votre équipe dispose de tout ce qu’il lui faut pour
-        s’acquitter de toutes ses tâches.
-      </p>
-    </div>
+
   </body>
   <style>
     .title-card {
@@ -70,7 +83,35 @@
       vertical-align: middle
     }
 
+    .about-text {
+      font-size: 1.2rem;
+    }
 
+    .grid-container {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr 0.8fr;
+      grid-template-rows: 0.8fr 1.8fr 0.4fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "image image image"
+        ". content ."
+        "footer footer footer";
+    }
+
+    .footer {
+      grid-area: footer;
+      height: 15vh;
+      background-color: #1c1c1c;
+
+    }
+
+    .image {
+      grid-area: image;
+    }
+
+    .content {
+      grid-area: content;
+    }
   </style>
 
 </html>
