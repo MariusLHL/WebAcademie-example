@@ -292,3 +292,51 @@ strong {
 h1 {
   margin: 0px !important;
 }
+
+
+/*FAQ Page*/
+
+.accordion {
+  border: none;
+  background-color: lightgrey;
+  width: 100%;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.panel {
+  display: none;
+}
+
+.accordion:hover {
+  background-color: whitesmoke;
+}
+
+.title-card {
+  margin-top: 0;
+  width: 100%;
+  height: 35vh;
+  background-image: url('./static/campus.jpg');
+  text-align: center;
+  display: table;
+}
+
+h1 {
+  display: table-cell;
+  vertical-align: middle
+}
+
+.question-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.6fr 0.7fr;
+  grid-template-rows: 0.1fr 2.9fr 0.1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+      ". . ."
+      ". Question ."
+      ". . .";
+}
+
+.Question {
+  grid-area: Question;
+}
