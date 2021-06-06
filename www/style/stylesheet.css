@@ -63,10 +63,6 @@ Footer {
   right: 0;
 }
 
-.left {
-  left: 0;
-}
-
 .punchline {
   width: 50%;
   display: flex;
@@ -81,7 +77,6 @@ Footer {
 }
 
 input[type="text"],
-select,
 textarea {
   outline: none;
   width: 100%;
@@ -94,13 +89,11 @@ textarea {
 }
 
 input[type="text"]:hover,
-select:hover,
 textarea:hover {
   border-bottom: solid #add8e6 !important;
 }
 
 input[type="text"]:focus,
-select:focus,
 textarea:focus {
   background-color: #f9f9f9;
   border-bottom: solid #3a9fbf !important;
@@ -132,19 +125,6 @@ textarea:focus {
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
-
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
 @keyframes text-focus-in {
   0% {
     -webkit-filter: blur(12px);
@@ -156,12 +136,6 @@ textarea:focus {
     filter: blur(0px);
     opacity: 1;
   }
-}
-
-input[type="radio"] {
-  -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-  -ms-appearance: checkbox;
 }
 
 a {
@@ -219,12 +193,6 @@ a {
 .div3 {
   grid-area: 1 / 3 / 6 / 4;
   margin-left: 50px;
-}
-
-.selector {
-  grid-area: selector;
-  margin-top: 100px;
-  background-color: rebeccapurple;
 }
 
 .link-nav {
@@ -342,13 +310,6 @@ h1 {
   vertical-align: middle;
 }
 
-.text-block {
-  background: red;
-  width: 60%;
-  display: table-cell;
-  vertical-align: middle;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr 0.8fr;
@@ -371,10 +332,6 @@ Footer {
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: "col1 col2 col3";
-}
-
-.footer-list{
-  color: white;
 }
 
 .col1 ,
@@ -426,13 +383,6 @@ ul {
 /* about */
 
 h1 {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.text-block {
-  background: red;
-  width: 60%;
   display: table-cell;
   vertical-align: middle;
 }
