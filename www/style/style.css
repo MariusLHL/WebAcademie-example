@@ -499,27 +499,12 @@ strong {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 150px;
 }
 
 /*success*/
 
-.success-container {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr 0.9fr;
-  grid-template-rows: 0.5fr 1.2fr 1.3fr;
-  gap: 5% 0px;
-  grid-template-areas:
-      ". . ."
-      ". Success ."
-      ". . .";
-}
-
-.Success {
-  grid-area: Success;
-}
-
-.congrat {
+.title {
   text-align: center;
   margin: 0px auto;
   display: block;
