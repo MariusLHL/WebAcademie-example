@@ -4,3 +4,4 @@ console.log(cookie)
 document.getElementById('model').innerHTML = cookie.model
 document.getElementById('color').innerHTML = cookie.color
 document.getElementById('storage').innerHTML = cookie.stockage
+document.getElementById('total').innerHTML = cookie.total

@@ -44,7 +44,8 @@
                         </p>
                         <p class="black preview_text"><strong>Couleur:</strong><span id="color">red</span></p><br>
                         <p class="black preview_text"><strong>Stockage:</strong><span id="storage">128</span>GB</p><br>
-                        <a href="./success.html" class="blue-btn">Proceder au Paiment</a>
+                        <p class="black preview_text"><strong>Total:</strong><span id="total">1200</span>$</p><br>
+                        <a href="./success.html" class="blue-btn">Proceder</a>
 
                     </div>
                 </div>
@@ -54,16 +55,16 @@
                     <form action="">
                         <div class="">
                             <h3>Addresse</h3>
-                            <i class="fa fa-user"></i> Nom
+                            Nom
                             <input type="text" id="fname" name="firstname">
-                            <label for="sname"><i class="fa fa-user"></i> Prenom
+                            <label for="sname"> Prenom
                                 <input type="text" id="sname" name="lastname">
-                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                <label for="email"> Email</label>
                                 <input type="text" id="email" name="email" placeholder="john@example.com">
-                                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-                                <label for="city"><i class="fa fa-institution"></i> City</label>
-                                <input type="text" id="city" name="city" placeholder="New York">
+                                <label for="adr"> Addresse</label>
+                                <input type="text" id="adr" name="address" placeholder="2 rue charle de gaule">
+                                <label for="city">Departement</label>
+                                <input type="text" id="city" name="city" placeholder="78000">
 
                                 <div class="row">
                                     <div class="">
@@ -85,12 +86,12 @@
                                 <i class="fa fa-cc-mastercard" style="color:red;"></i>
                                 <i class="fa fa-cc-discover" style="color:orange;"></i>
                             </div>
-                            <label for="cname">Name on Card</label>
-                            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                            <label for="ccnum">Credit card number</label>
+                            <label for="cname">Nom sur la carte</label>
+                            <input type="text" id="cname" name="cardname" placeholder="John Doe">
+                            <label for="ccnum">Numero de compte</label>
                             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                            <label for="expmonth">Exp Month</label>
-                            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                            <label for="expmonth">Date d'expiration</label>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="10/22">
                             <div class="row">
                                 <div class="">
                                     <label for="expyear">Exp Year</label>
@@ -164,6 +165,7 @@
             }
         </style>
         <script src="./js/shipping.js"></script>
+        <Footer></Footer>
     </body>
 
 </html>

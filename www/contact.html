@@ -37,22 +37,17 @@
         <div class="grid-container">
             <div class="image">
                 <div class="title-card">
-                    <h1 class="color-white">Contact</h1>
+                    <h1 class="">Contact</h1>
                 </div>
             </div>
             <div class="content">
-                <div style="display: flex; justify-content: space-between;">
-                    <div style="width: 45%; display: inline-block; padding-right: 5px;">
-                        <label for="nom">Nom:</label>
-                        <input type="text" name="nom" id="">
-                    </div>
-                    <label for="prenom" style="display: inline;">Prenom:</label>
-
-                    <div style="width: 45%; display: inline-block;">
-                        <input type="text" name="prenom" id="">
-
-                    </div>
-                </div>
+                <label for="name">Nom:</label>
+                <input type="text" name="name" id="" placeholder="Jhon Doe">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="" placeholder="jhon@doe.fr">
+                <label for="content">Objet de votre requete:</label>
+                <textarea name="content" id="" cols="30" rows="10" placeholder="Entrer vote message ici"></textarea>
+                <a class="blue-btn" style="margin-top: 0.5rem">Envoyer</a>
             </div>
             <div class="footer">
 
@@ -80,10 +75,6 @@
             width: 60%;
             display: table-cell;
             vertical-align: middle
-        }
-
-        .about-text {
-            font-size: 1.2rem;
         }
 
         .grid-container {
