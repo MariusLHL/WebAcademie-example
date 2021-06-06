@@ -122,10 +122,9 @@ textarea:focus {
 }
 
 .blue-btn:hover {
-  cursor:pointer;
+  cursor: pointer;
   background-color: rgb(98, 173, 201);
 }
-
 
 /* Animation css */
 
@@ -167,11 +166,6 @@ input[type="radio"] {
 
 a {
   text-decoration: none;
-}
-
-.title {
-  z-index: 0;
-  text-align: center;
 }
 
 .title-container {
@@ -293,7 +287,6 @@ h1 {
   margin: 0px !important;
 }
 
-
 /*FAQ Page*/
 
 .accordion {
@@ -316,14 +309,15 @@ h1 {
   margin-top: 0;
   width: 100%;
   height: 35vh;
-  background-image: url('./static/campus.jpg');
+  background-image: url("../static/campus.jpg");
+
   text-align: center;
   display: table;
 }
 
-h1 {
+.card-title {
   display: table-cell;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 .question-container {
@@ -332,11 +326,201 @@ h1 {
   grid-template-rows: 0.1fr 2.9fr 0.1fr;
   gap: 0px 0px;
   grid-template-areas:
-      ". . ."
-      ". Question ."
-      ". . .";
+    ". . ."
+    ". Question ."
+    ". . .";
 }
 
 .Question {
   grid-area: Question;
+}
+
+/* Contact */
+
+h1 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text-block {
+  background: red;
+  width: 60%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 0.8fr;
+  grid-template-rows: 0.8fr 1.8fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "image image image"
+    ". content ."
+    "footer footer footer";
+}
+
+.footer {
+  grid-area: footer;
+  height: 15vh;
+  background-color: #1c1c1c;
+}
+
+.image {
+  grid-area: image;
+}
+
+.content {
+  grid-area: content;
+}
+
+/* about */
+
+h1 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text-block {
+  background: red;
+  width: 60%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.about-text {
+  font-size: 1.2rem;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 0.8fr;
+  grid-template-rows: 0.8fr 1.8fr 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "image image image"
+    ". content ."
+    "footer footer footer";
+}
+
+.footer {
+  grid-area: footer;
+  height: 15vh;
+  background-color: #1c1c1c;
+}
+
+.image {
+  grid-area: image;
+}
+
+.content {
+  grid-area: content;
+}
+
+.color-gray {
+  color: #262626;
+}
+
+.color-grey {
+  color: lightgrey;
+}
+
+/* Shipping*/
+
+.shipping-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.1fr 1.7fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . form form form form form form . . . ."
+    ". . form form form form form form preview preview preview ."
+    ". . form form form form form form . . . .";
+}
+
+.preview {
+  grid-area: preview;
+  padding-top: 0% !important;
+  padding: 10%;
+}
+
+.info {
+  border: 2px dotted gray;
+  background-color: #fbfbfb;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+}
+
+.form {
+  grid-area: form;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.ico_preview {
+  height: 100px;
+  display: inline-block;
+}
+
+.preview_text {
+  display: block;
+  margin-left: 5px !important;
+  margin: 0px;
+}
+
+.prev_text_container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Success */
+
+.success-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  grid-template-rows: 0.5fr 1.2fr 1.3fr;
+  gap: 5% 0px;
+  grid-template-areas:
+      ". . ."
+      ". Success ."
+      ". . .";
+}
+
+.Success {
+  grid-area: Success;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*success*/
+
+.success-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  grid-template-rows: 0.5fr 1.2fr 1.3fr;
+  gap: 5% 0px;
+  grid-template-areas:
+      ". . ."
+      ". Success ."
+      ". . .";
+}
+
+.Success {
+  grid-area: Success;
+}
+
+.congrat {
+  text-align: center;
+  margin: 0px auto;
+  display: block;
 }
