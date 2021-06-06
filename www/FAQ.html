@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Foire au Question</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <body>
+        <Nav>
+            <a href="./index.html">
+                <img src="./static/logo.png" class="logo" alt="" srcset="">
+            </a>
+            <div class="box-right">
+                <a class="link-nav" href="./contact.html">
+                    <p class="text-nav">Contact</p>
+                </a>
+                <a class="link-nav" href="./about.html">
+                    <p class="text-nav">A propos</p>
+                </a>
+                <a class="link-nav" href="./FAQ.html">
+                    F.A.Q
+                </a>
+                <a class="link-nav blue-btn" href="./configurator.html">
+                    Acheter
+                </a>
+
+            </div>
+
+        </Nav>
+        <div class="question-container">
+
+            <div class="Question">
+                <div class="title-card">
+                    <h1 class="">Foire au Question</h1>
+                </div>
+                <button class="accordion">Qu’est-ce que l’identifiant Apple ?</button>
+                <div class="panel">
+                    <p>Votre identifiant Apple est un compte qui vous donne accès aux services Apple comme l’App Store,
+                        iCloud, iMessage, FaceTime et Apple Music. L’adresse e-mail que vous associez à ce compte est
+                        également appelée votre identifiant Apple.</p>
+                </div>
+
+                <button class="accordion">Quels sont les délais de livraisons ?</button>
+                <div class="panel">
+                    <p>Nous expédions généralement les produits entre 3 à 5 jours ouvrés. Si le produit est en stock en
+                        boutique Apple Store, vous pouvez retirer directement votre commande sous 2h. </p>
+                </div>
+
+                <button class="accordion">Comment se passe les retours ?</button>
+                <div class="panel">
+                    <p>Si vous n’êtes pas satisfait de votre matériel Apple, vous pouvez retourner votre produit dans
+                        les 14 jours après réception de votre commande.</p>
+                </div>
+
+                <button class="accordion">D'autre question ?</button>
+                <div class="panel">
+                    <p>Si vous avez d'autre question vous pouvez nous contacter vias notre page de  <a href="./contact.html">contact</a> ou pars mail a contact@mariuslhl.dev</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+        </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+
+            for (const button of acc) {
+                button.addEventListener('click', () => {
+                    let e = button.nextElementSibling
+                    let dis = e.style.display
+
+                    e.style.display = (dis == "block" ? "none" : "block")
+                })
+            }
+        </script>
+    </body>
+    <style>
+        .accordion {
+            border: none;
+            background-color: lightgrey;
+            width: 100%;
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        .panel {
+            display: none;
+        }
+
+        .accordion:hover {
+            background-color: whitesmoke;
+        }
+
+        .title-card {
+            margin-top: 0;
+            width: 100%;
+            height: 35vh;
+            background-image: url('./static/campus.jpg');
+            text-align: center;
+            display: table;
+        }
+
+        h1 {
+            display: table-cell;
+            vertical-align: middle
+        }
+
+        .question-container {
+            display: grid;
+            grid-template-columns: 0.7fr 1.6fr 0.7fr;
+            grid-template-rows: 0.1fr 2.9fr 0.1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                ". . ."
+                ". Question ."
+                ". . .";
+        }
+
+        .Question {
+            grid-area: Question;
+        }
+    </style>
+
+</html>
