@@ -360,10 +360,59 @@ h1 {
     "footer footer footer";
 }
 
-.footer {
+.footer,
+Footer {
   grid-area: footer;
-  height: 15vh;
   background-color: #1c1c1c;
+  height: 15vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "col1 col2 col3";
+}
+
+.footer-list{
+  color: white;
+}
+
+.col1 ,
+.col2 ,
+.col3 {
+  background-color: #1c1c1c;
+}
+
+.col1 a,
+.col2 a,
+.col3 a{
+  text-decoration: none;
+  color: lightgrey;
+  line-height: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  column-count: 2;
+}
+
+.col1 {
+  padding: 5px;
+  grid-area: col1;
+}
+.col2 {
+  padding: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  grid-area: col2;
+}
+
+.col2 p{
+  text-align: center;
+}
+.col3 {
+  padding: 5px;
+  grid-area: col3;
 }
 
 .image {
@@ -486,9 +535,9 @@ strong {
   grid-template-rows: 0.5fr 1.2fr 1.3fr;
   gap: 5% 0px;
   grid-template-areas:
-      ". . ."
-      ". Success ."
-      ". . .";
+    ". . ."
+    ". Success ."
+    ". . .";
 }
 
 .Success {
