@@ -42,6 +42,10 @@ Footer {
   overflow: hidden;
 }
 
+.punchline p {
+  margin-right: 100px;
+}
+
 .flower {
   background-image: url("../static/flower_blur.png");
   background-size: cover;
@@ -334,15 +338,15 @@ Footer {
   grid-template-areas: "col1 col2 col3";
 }
 
-.col1 ,
-.col2 ,
+.col1,
+.col2,
 .col3 {
   background-color: #1c1c1c;
 }
 
 .col1 a,
 .col2 a,
-.col3 a{
+.col3 a {
   text-decoration: none;
   color: lightgrey;
   line-height: 2rem;
@@ -364,7 +368,7 @@ ul {
   grid-area: col2;
 }
 
-.col2 p{
+.col2 p {
   text-align: center;
 }
 .col3 {
@@ -507,4 +511,33 @@ strong {
   text-align: center;
   margin: 0px auto;
   display: block;
+}
+
+.chip {
+  height: 350px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bullet-point {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+      "dark a12 sig";
+}
+
+.dark {
+  grid-area: dark;
+}
+
+.a12 {
+  grid-area: a12;
+}
+
+.sig {
+  grid-area: sig;
 }
