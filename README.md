@@ -5,9 +5,9 @@ Version live disponnible ici:
 https://academie.mariuslhl.dev ou https://webacademie-example.pages.dev 
 
 
-## Contact
+![alt text](./preview.png)
 
-# email
+# Contact
 contact@mariuslhl.dev
 
 ## License
